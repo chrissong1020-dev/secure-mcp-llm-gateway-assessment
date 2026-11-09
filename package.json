@@ -1,0 +1,35 @@
+{
+  "name": "solution-architect-gateway-assessment",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Four small, runnable examples covering MCP servers and secure LLM gateways.",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "check": "npm run build && npm test",
+    "task1": "tsx src/task1-mcp-server.ts",
+    "task2": "tsx src/task2-mcp-gateway.ts",
+    "mock:mcp": "tsx src/mock-mcp-http-server.ts",
+    "task3": "tsx src/task3-stream-gateway.ts",
+    "task4": "tsx src/task4-router-gateway.ts",
+    "token": "tsx src/create-token.ts"
+  },
+  "engines": {
+    "node": ">=20.18"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.20.2",
+    "gpt-tokenizer": "^3.4.0",
+    "jose": "^6.1.0",
+    "sql.js": "^1.13.0",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^20.17.30",
+    "@types/sql.js": "^1.4.9",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.12"
+  }
+}
